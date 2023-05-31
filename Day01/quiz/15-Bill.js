@@ -1,7 +1,11 @@
 /** hitung total gaji karyawan */
 
 function totalGaji(gaji1, gaji2, gaji3) {
-   
+   const pajak1=taxGaji(gaji1);
+   const pajak2=taxGaji(gaji2);
+   const pajak3=taxGaji(gaji3);
+   const total=(gaji1+(pajak1*gaji1))+(gaji2+(pajak2*gaji2))+(gaji3+(pajak3*gaji3));
+   return `Total gaji yang harus dibayar :\nEmp 1 : Rp.${gaji1} + Pajak(${pajak1*100}%)=Rp.${gaji1+(pajak1*gaji1)}\nEmp2 : Rp.${gaji2} + Pajak(${pajak2*100}%)=Rp.${gaji2+(pajak2*gaji2)}\nEmp3 : Rp.${gaji3} + Pajak(${pajak3*100}%)=Rp.${gaji3+(pajak3*gaji3)}\nTotal : ${total}`;
 }
 
 function taxGaji(gaji) {
