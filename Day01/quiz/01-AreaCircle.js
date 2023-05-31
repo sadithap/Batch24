@@ -6,8 +6,17 @@
   getAreaCircle(5);    //retun 78.53975
  */
 
+const pi=3.14159;
 function getAreaCircle(r) {
-
+  if(r<=0){
+    return("radius -1 <= 0, try higher");
+  }
+  else if(typeof r ==='string'){
+    return("Inputan harus dalam angka");
+  }
+  else{
+    return(pi*r*r);
+  }
 }
 
 

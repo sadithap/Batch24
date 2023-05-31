@@ -5,7 +5,11 @@
  */
 
 function fareinheitToKelvin(fareinheit){
-   
+   const toInt=parseInt(fareinheit);
+    if(isNaN(toInt)){
+        return ('Fareinheit must an number');
+   }
+   return Math.round((toInt + 459.67)/1.8);
 }
 
 console.log(fareinheitToKelvin(45)); //Convert Fareinheit (45) to Kelvin = 280

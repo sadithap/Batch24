@@ -6,6 +6,16 @@
  */
 
 function calculateDistance(a, t){
+    if(typeof a!=='number' || typeof t!=='number'){
+        return ('input must an number');
+    }
+    else if(a<=0 || t<=0){
+        return ('Accelaration or time must be >= 0');
+    }
+    else{
+        const s=1/2*a*Math.pow(t,2);
+        return ("Jarak yang ditempuh adalah "+s+" meter/s");
+    }
 
 }
 

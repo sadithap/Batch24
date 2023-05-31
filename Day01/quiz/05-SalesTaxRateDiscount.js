@@ -4,7 +4,23 @@
   */
 
  function getSalesDiscount(price,tax,discount){
-
+    if(typeof price!=='number' && typeof tax!=='number' && typeof discount!=='number'){
+        return ('Price, Tax & Discount harus dalam angkaa');
+    }
+    if(typeof price!=='number'){
+        return ('Price harus dalam angka');
+    }
+    if(typeof tax!=='number'){
+        return ('Pajak harus dalam angka');
+    }
+    if(typeof discount!=='number'){
+        return ('Discount harus dalam angka');
+    }
+    const discountP=discount/100*price;
+    const priceAfterDiscount=price-discountP;
+    const pajak=tax/100*priceAfterDiscount;
+    const totPayment=priceAfterDiscount+pajak;
+    return (`Total Sales\t: Rp.${price}\nDIscount (5%)\t: Rp.${discountP}\nPriceAfterDiscount\t: Rp.${priceAfterDiscount}\nPajak (10%)\t: Rp.${pajak}\n----------------------------------\nTotalPayment\t: Rp.${totPayment}`);
  }
 
 console.log(getSalesDiscount("a", 1,5));//Price harus dalam angka

@@ -3,7 +3,16 @@
  */
 
 function convertToRupiah(money,type){
-    
+    if(type==='yen'){
+        return `${money} yen = Rp.${(money/1000)*130120}`;
+    }
+    if(type==='usd'){
+        return `${money} usd = Rp.${(money/100)*1438250}`;
+    }
+    if(type==='euro'){
+        return `${money} euro = Rp.${(money/100)*1600000}`;
+    }
+    return 'no match type currency';
 }
 
 console.log(convertToRupiah(1000,'yen'));//1000 yen  = Rp.130.120

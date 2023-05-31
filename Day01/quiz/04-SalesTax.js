@@ -4,7 +4,13 @@
  */
 
 function getSalesTax(price, tax) {
-        
+    if(typeof price!=='number'){
+        return ('Price harus dalam angka');
+    }
+    else if(typeof tax!=='number'){
+        return ('Price & Pajak harus dalam angka');
+    }
+    return (`Total Sales : Rp.${price}\nPajak : 0.${tax}\nTotalHarga+Pajak : Rp.${price+tax}`);
 }
 
 console.log(getSalesTax("a", 1));//Price harus dalam angka
