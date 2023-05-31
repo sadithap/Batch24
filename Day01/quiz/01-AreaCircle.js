@@ -14,9 +14,7 @@ function getAreaCircle(r) {
   else if(typeof r ==='string'){
     return("Inputan harus dalam angka");
   }
-  else{
-    return(pi*r*r);
-  }
+  return(pi*r*r);
 }
 
 

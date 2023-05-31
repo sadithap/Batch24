@@ -3,13 +3,14 @@
  */
 
 function sumDigit(n){
-    toInt=parseInt(n);
-    if(isNaN(toInt)){
+    if(isNaN(n)){
         return (`${n} is not number, try again...`);
     }
+    toInt=parseInt(n);
     if(toInt>=10000){
         return (`${n} harus lebih kecil dari 10000`);
     }
+    
     toString=String(toInt);
     digit=toString.split("");
     total=0;

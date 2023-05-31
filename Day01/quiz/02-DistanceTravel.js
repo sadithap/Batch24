@@ -14,7 +14,7 @@ function calculateDistance(a, t){
     }
     else{
         const s=1/2*a*Math.pow(t,2);
-        return ("Jarak yang ditempuh adalah "+s+" meter/s");
+        return (`Jarak yang ditempuh adalah ${s} meter/s`);
     }
 
 }

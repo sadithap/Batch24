@@ -5,10 +5,14 @@
  */
 
 function fareinheitToKelvin(fareinheit){
-   const toInt=parseInt(fareinheit);
-    if(isNaN(toInt)){
+   if(isNaN(fareinheit)){
         return ('Fareinheit must an number');
    }
+   let toInt=parseInt(fareinheit);
+   if(typeof fareinheit==='string'){
+      toInt*=1000;
+   }
+   
    return Math.round((toInt + 459.67)/1.8);
 }
 
