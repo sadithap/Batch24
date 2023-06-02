@@ -9,13 +9,13 @@ function getPeriodTimes(seconds) {
         return (`${seconds} is not number`);
     }
     let toInt=parseInt(seconds);
-    var days = Math.floor(toInt / (24*60*60));
+    let days = Math.floor(toInt / (24*60*60));
     toInt %= 24*60*60;
 
-    var hours = Math.floor(toInt / (60*60));
+    let hours = Math.floor(toInt / (60*60));
     toInt %= 60*60;
 
-    var minutes = Math.floor(toInt / 60);
+    let minutes = Math.floor(toInt / 60);
     toInt %= 60;
     
     return (`${days} hari ${hours} jam ${minutes} menit ${toInt} detik`);
