@@ -1,7 +1,13 @@
 /** buat segitiga  */ 
-
+let index=5;
+    
 for (let i = 0; i < 6; i++) {
-
+    let output=' ';
+    for(let j=1;j<index;j++){
+        output+=j+' ';
+    }
+    index--;
+    console.log(output);
 } 
 // output 
 // 1 2 3 4 
@@ -9,8 +15,15 @@ for (let i = 0; i < 6; i++) {
 // 1 2 
 // 1 
 
-for (let i = 0; i < 6; i++) {
-
+console.log();
+index=5;
+for (let i = 0; i < 6 ; i++) {
+    let output=' ';
+    for(let j=index;j>0;j--){
+        output+=j+' ';
+    }
+    index--;
+    console.log(output);
 }  
 
 // output
