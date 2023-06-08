@@ -1,0 +1,22 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var vehicle_1 = require("./vehicle");
+var summary_1 = require("./summary");
+//format noPolice/Register,order/rent,orderPerKM/driver,vehicleType,year,price,seat,TransactionDate
+var v1 = new vehicle_1.SUV('D 1001 UM', 500000, 150000, 'SUV', 2010, 350000000, 4, '10/01/2023');
+var v2 = new vehicle_1.SUV('D 1002 UM', 500000, 150000, 'SUV', 2010, 350000000, 4, '10/01/2023');
+var v3 = new vehicle_1.SUV('D 1003 UM', 500000, 150000, 'SUV', 2015, 350000000, 5, '12/01/2023');
+var v4 = new vehicle_1.SUV('D 1004 UM', 500000, 150000, 'SUV', 2015, 350000000, 5, '13/01/2023');
+var v5 = new vehicle_1.Taxi('D 11 UK', 45, 4500, 'Taxi', 2002, 175000000, 4, '12/01/2023');
+var v6 = new vehicle_1.Taxi('D 12 UK', 75, 4500, 'Taxi', 2015, 225000000, 4, '13/01/2023');
+var v7 = new vehicle_1.Taxi('D 13 UK', 90, 4500, 'Taxi', 2020, 275000000, 4, '13/01/2023');
+var v8 = new vehicle_1.PrivateJet('ID8089', 35000000, 15000000, 'PrivateJet', 2015, 150000000000, 12, '23/12/2022');
+var v9 = new vehicle_1.PrivateJet('ID8099', 55000000, 25000000, 'PrivateJet', 2018, 175000000000, 15, '25/12/2022');
+var vehicle = [v1, v2, v3, v4, v5, v6, v7, v8, v9];
+var summary = new summary_1.InfoSummary(vehicle);
+console.log('Total vehicle : ' + summary.getTotalVehicle());
+console.log('Total SUV : ' + summary.getTotalVehicle('SUV'));
+console.log('Total income SUV : ' + summary.getTotalIncomeVehicle('SUV'));
+console.log('Total income Taxi : ' + summary.getTotalIncomeVehicle('Taxi'));
+console.log('Total income PrivateJet : ' + summary.getTotalIncomeVehicle('PrivateJet'));
+console.log('Total income vehicle : ' + summary.getTotalIncomeVehicle());
